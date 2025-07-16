@@ -6,8 +6,8 @@ import { TextField, Button, Stack } from '@mui/material';
 
 export const AddTodoForm = () => {
     const dispatch = useDispatch();
-    const [title, setTitle] = useState('');
-    const [error, setError] = useState('');
+    const [title, setTitle] = useState<string>('');
+    const [error, setError] = useState<string>('');
 
     const handleSubmit = () => {
         if (!title.trim()) {
