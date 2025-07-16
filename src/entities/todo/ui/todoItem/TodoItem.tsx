@@ -43,11 +43,11 @@ export const TodoItem: FC<IProps> = ({ todo }) => {
                 </Typography>
             )}
             {isEditing ? (
-                <IconButton onClick={handleSave}>Сохранить</IconButton>
+                <IconButton size="small" onClick={handleSave}>Сохранить</IconButton>
             ) : (
-                <IconButton onClick={() => setIsEditing(true)}>Изменить</IconButton>
+                <IconButton size="small" onClick={() => setIsEditing(true)}>Изменить</IconButton>
             )}
-            <IconButton onClick={() => dispatch(removeTodo(todo.id))}>Удалить</IconButton>
+            <IconButton size="small" onClick={() => dispatch(removeTodo(todo.id))}>Удалить</IconButton>
         </Stack>
     );
 };
